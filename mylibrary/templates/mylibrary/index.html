@@ -1,0 +1,25 @@
+{% extends "mylibrary/base_generic.html" %}
+
+{% block content %}
+  <h1>Local Library Home</h1>
+
+  <p>Welcome to <em>LocalLibrary</em>, a very basic Django website </p>
+
+  <h2>Dynamic content</h2>
+
+  <p>The library has the following record counts:</p>
+  
+ <!-- Loop to retrieve book objects -->
+{% for book in books %}
+<ul>
+  <li><strong>Title:</strong> <br><a href="{% url 'book_detail' book.id %}">{{ book.title }}</a></li>
+  <li><strong>Author:</strong> <br>{{ book.author }}</li>
+  <li><strong>ISBN:</strong> <br>{{ book.isbn }}</li>
+  <li><strong>Summary:</strong> <br>{{ book.summary }}</li>
+</ul>
+<hr>
+{% endfor %}
+<!-- End Loop -->
+
+
+{% endblock %}

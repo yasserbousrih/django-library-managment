@@ -1,0 +1,18 @@
+{% extends "mylibrary/base_generic.html" %}
+
+{% block content %}
+
+    <h1>Local Library Home</h1>
+
+    <p>Welcome to <em>LocalLibrary</em>, a very basic Django website</p>
+
+    <h2>Dynamic content</h2>
+    <!-- Loop for retrieving author objects -->
+    {% for author in authors %}
+        <h3>{{ author.last_name }}</h3>
+        <p>Author's first name: {{ author.first_name }}</p>
+        <p>Date of birth: {{ author.date_of_birth }}</p>
+        <hr>
+    {% endfor %}
+    <!-- End loop -->
+{% endblock %}

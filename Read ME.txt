@@ -1,0 +1,9 @@
+install pyhton here 
+https://www.python.org/downloads/
+
+use command <pip install Django> to install django 
+
+Run the following command to start the server:
+python manage.py runserver
+By default, the server will run on http://127.0.0.1:8000/
+ 
